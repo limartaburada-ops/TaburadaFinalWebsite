@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ember &amp; Leaf | Artisanal Coffee &amp; Tea House</title>
+    <meta
+      name="description"
+      content="Every sip tells a story. Discover Ember &amp; Leaf's curated collection of small-batch roasted coffees, ceremonial matcha, and artisan teas."
+    />
+    <meta property="og:title" content="Ember &amp; Leaf | Artisanal Coffee &amp; Tea House" />
+    <meta
+      property="og:description"
+      content="Discover the perfect harmony of rich coffee, aromatic tea, and unforgettable flavors. Your favorite moment of comfort starts here."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#coffee">Skip to menu</a>
+
+    <!-- Sticky Navigation -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="#home" class="brand-link" aria-label="Ember and Leaf Home">
+          <img src="img/logo.png" alt="Ember and Leaf monogram" class="brand-logo" width="40" height="40" />
+          <span class="brand-name">Ember &amp; Leaf</span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#coffee" class="nav-link">Coffee</a>
+          <a href="#tea" class="nav-link">Tea</a>
+          <a href="#best-sellers" class="nav-link">Best Sellers</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button
+            type="button"
+            class="cart-trigger"
+            id="cart-open-btn"
+            aria-label="Open shopping cart"
+            aria-controls="cart-drawer"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M6 7h15l-1.5 9h-12z"></path>
+              <path d="M6 7L5 3H2"></path>
+              <circle cx="9.5" cy="20" r="1.25"></circle>
+              <circle cx="17.5" cy="20" r="1.25"></circle>
+            </svg>
+            <span class="cart-label">Bag</span>
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
+
+          <button
+            type="button"
+            class="menu-toggle"
+            id="mobile-menu-btn"
+            aria-label="Toggle navigation menu"
+            aria-controls="mobile-nav-panel"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div class="mobile-nav-panel" id="mobile-nav-panel" hidden>
+        <nav class="mobile-nav-links" aria-label="Mobile navigation">
+          <a href="#home" class="mobile-nav-link">Home</a>
+          <a href="#about" class="mobile-nav-link">About</a>
+          <a href="#coffee" class="mobile-nav-link">Coffee</a>
+          <a href="#tea" class="mobile-nav-link">Tea</a>
+          <a href="#best-sellers" class="mobile-nav-link">Best Sellers</a>
+          <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="home">
+        <div class="hero-media-wrap">
+          <img
+            src="img/hero-coffee-tea.jpg"
+            alt="Steaming espresso in 24k gold-encrusted black Limoges porcelain on gilded double charger plates beside a cut-crystal and hammered gold teapot over a candle warmer, baroque gold spoons, crystal sugar bowl, and crackling fireplace hearth"
+            class="hero-bg-img"
+            referrerpolicy="no-referrer"
+          />
+          <div class="hero-scrim" aria-hidden="true"></div>
+
+          <!-- Photorealistic Canvas Steam & Hearth Embers Over Cup & Teapot -->
+          <canvas class="hero-fx-canvas" id="hero-fx-canvas" aria-hidden="true"></canvas>
+        </div>
+
+        <div class="container hero-content">
+          <div class="hero-copy reveal-on-scroll">
+            <p class="hero-kicker">Ember &amp; Leaf | Small-Batch Roastery &amp; Tea House</p>
+            <h1 class="hero-title">Every Sip Tells a Story.</h1>
+            <p class="hero-subtitle">
+              Discover the perfect harmony of rich coffee, aromatic tea, and unforgettable flavors. Your favorite moment of comfort starts here.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#best-sellers" class="btn btn-primary">Shop Now</a>
+              <a href="#coffee" class="btn btn-outline-light">Explore Our Collection</a>
+            </div>
+          </div>
+
+          <div class="hero-meta-strip reveal-on-scroll">
+            <div class="hero-meta-item">
+              <span class="meta-heading">Small-Batch Velvet Roast</span>
+              <span class="meta-desc">Single-origin Arabica pulled fresh to order</span>
+            </div>
+            <div class="hero-meta-divider" aria-hidden="true"></div>
+            <div class="hero-meta-item">
+              <span class="meta-heading">Heirloom Cups, Plates &amp; Utensils</span>
+              <span class="meta-desc">24k gold-trimmed porcelain, Baccarat crystal, gilded chargers &amp; baroque spoons</span>
+            </div>
+            <div class="hero-meta-divider" aria-hidden="true"></div>
+            <div class="hero-meta-item">
+              <span class="meta-heading">40 Signature Creations</span>
+              <span class="meta-desc">Handcrafted espresso blends, lattes &amp; milk teas</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="section section-dark-coffee about-section" id="about">
+        <div class="container about-grid">
+          <div class="about-visual reveal-on-scroll">
+            <div class="about-frame">
+              <img
+                src="img/about-roastery-craft.jpg"
+                alt="Gold-rimmed porcelain espresso cup on saucer, brass gooseneck kettle, black ceramic matcha bowl, and crystal tea jars on black marble"
+                class="about-img"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+              <canvas class="about-fx-canvas" id="about-fx-canvas" aria-hidden="true"></canvas>
+            </div>
+          </div>
+
+          <div class="about-text reveal-on-scroll">
+            <p class="section-eyebrow">Our Story &amp; Craft</p>
+            <h2 class="section-title">Born from Ember, Steeped in Leaf</h2>
+            <p class="about-lead">
+              Ember &amp; Leaf began with a quiet conviction: a remarkable cup should feel like an unhurried ritual, never rushed and never ordinary.
+            </p>
+            <p class="body-copy">
+              Every morning, we calibrate our roasts for velvet crema and sweet caramel depth while steeping whole black, green, and floral tea leaves at exact temperatures. Whether you reach for a bold Vietnamese phin brew or a cloud-soft Hokkaido milk tea, every pour is freshly prepared with Madagascar vanilla, roasted Okinawa kokuto sugar, stone-milled Uji matcha, and pure cocoa.
+            </p>
+
+            <div class="craft-pillars">
+              <div class="craft-pillar">
+                <h3 class="craft-title">01. Freshly Prepared</h3>
+                <p class="craft-copy">Pulled, whisked, and steeped individually, served on marble saucers and scalloped plates with antique brass utensils.</p>
+              </div>
+              <div class="craft-pillar">
+                <h3 class="craft-title">02. Pure Botanicals</h3>
+                <p class="craft-copy">Real fruit purees, whole-leaf teas, single-origin beans, and house-simmered syrups.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Best Sellers Spotlight Section -->
+      <section class="section section-espresso best-sellers-section" id="best-sellers">
+        <div class="container">
+          <div class="section-head section-head-centered reveal-on-scroll">
+            <p class="section-eyebrow gold">House Favorites</p>
+            <h2 class="section-title light">Most-Loved Best Sellers</h2>
+            <p class="section-desc light">
+              Six signature pours guests return to every day, crafted with flowing caramel, sweet condensed milk, ceremonial matcha, and dark brown sugar pearls.
+            </p>
+          </div>
+
+          <div class="bestseller-grid" id="bestseller-grid">
+            <!-- Populated dynamically by js/script.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu Filter & Search Explorer -->
+      <section class="menu-controls-band" aria-label="Menu search and category filters">
+        <div class="container menu-controls-stack">
+          <div class="menu-controls-inner">
+            <div class="search-wrap">
+              <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+              </svg>
+              <input
+                type="search"
+                id="menu-search"
+                class="search-input"
+                placeholder="Search espresso, matcha, brown sugar, taro..."
+                aria-label="Search coffee and tea flavors"
+              />
+              <button type="button" id="search-clear-btn" class="search-clear-btn" hidden aria-label="Clear search">
+                Clear
+              </button>
+            </div>
+
+            <div class="filter-tabs" role="tablist" aria-label="Filter beverages by category">
+              <button type="button" class="filter-tab is-active" data-filter="all" role="tab" aria-selected="true">
+                All Drinks (40)
+              </button>
+              <button type="button" class="filter-tab" data-filter="hot-coffee" role="tab" aria-selected="false">
+                Hot Coffee
+              </button>
+              <button type="button" class="filter-tab" data-filter="iced-coffee" role="tab" aria-selected="false">
+                Iced Coffee
+              </button>
+              <button type="button" class="filter-tab" data-filter="brewed-tea" role="tab" aria-selected="false">
+                Brewed &amp; Fruit Tea
+              </button>
+              <button type="button" class="filter-tab" data-filter="milk-tea" role="tab" aria-selected="false">
+                Milk Tea &amp; Matcha
+              </button>
+            </div>
+          </div>
+
+          <div class="menu-subcontrols">
+            <div class="mood-filters" role="group" aria-label="Filter by flavor profile">
+              <span class="subcontrol-label">Flavor Profile</span>
+              <button type="button" class="mood-btn is-active" data-mood="all">All Notes</button>
+              <button type="button" class="mood-btn" data-mood="bold">Smoky &amp; Bold</button>
+              <button type="button" class="mood-btn" data-mood="caramel">Velvet &amp; Caramel</button>
+              <button type="button" class="mood-btn" data-mood="matcha">Ceremonial Matcha</button>
+              <button type="button" class="mood-btn" data-mood="botanical">Floral &amp; Orchard</button>
+            </div>
+
+            <div class="sort-control">
+              <label for="menu-sort" class="subcontrol-label">Sort</label>
+              <select id="menu-sort" class="sort-select" aria-label="Sort beverages">
+                <option value="curated">House Curation</option>
+                <option value="featured">Best Sellers First</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="active-filter-bar" id="active-filter-bar" hidden>
+            <span class="active-filter-text" id="active-filter-text"></span>
+            <button type="button" class="active-filter-reset reset-filters-btn">Reset All Filters</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coffee Collection Section -->
+      <section class="section section-chocolate collection-section" id="coffee">
+        <div class="container">
+          <div class="collection-header reveal-on-scroll">
+            <div>
+              <p class="section-eyebrow gold" id="coffee-count-note">Roastery Menu | 20 Creations</p>
+              <h2 class="section-title light">The Coffee Collection</h2>
+            </div>
+            <p class="collection-summary light">
+              From velvety crema espresso shots and slow-steeped cold brew to caramel-drizzled macchiatos and layered matcha fusions.
+            </p>
+          </div>
+
+          <div class="product-grid" id="coffee-grid">
+            <!-- 20 Coffee products rendered by js/script.js -->
+          </div>
+
+          <div class="empty-filter-state" id="coffee-empty" hidden>
+            <p class="empty-title">No coffee flavors match your current search.</p>
+            <button type="button" class="btn btn-primary reset-filters-btn">Show All Coffee &amp; Tea</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subtle Espresso & Brass Inlay Divider -->
+      <div class="editorial-divider" aria-hidden="true">
+        <span class="divider-line"></span>
+        <span class="divider-diamond"></span>
+        <span class="divider-emblem">Roasted Beans &amp; Whole Tea Leaves</span>
+        <span class="divider-diamond"></span>
+        <span class="divider-line"></span>
+      </div>
+
+      <!-- Tea Collection Section -->
+      <section class="section section-umber collection-section" id="tea">
+        <div class="container">
+          <div class="collection-header reveal-on-scroll">
+            <div>
+              <p class="section-eyebrow gold" id="tea-count-note">Tea Apothecary | 20 Creations</p>
+              <h2 class="section-title light">The Tea Collection</h2>
+            </div>
+            <p class="collection-summary light">
+              Whole-leaf black and floral infusions, stone-ground ceremonial matcha, brown sugar tiger milk teas, and bright orchard coolers.
+            </p>
+          </div>
+
+          <div class="product-grid" id="tea-grid">
+            <!-- 20 Tea products rendered by js/script.js -->
+          </div>
+
+          <div class="empty-filter-state" id="tea-empty" hidden>
+            <p class="empty-title">No tea flavors match your current search.</p>
+            <button type="button" class="btn btn-primary reset-filters-btn">Show All Coffee &amp; Tea</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Curated 3-Cup Candlelit Tasting Flight Tray -->
+      <section class="section section-espresso tasting-flight-section" id="tasting-flight">
+        <div class="container">
+          <div class="section-head section-head-centered reveal-on-scroll">
+            <p class="section-eyebrow gold">Sommelier Table Ritual</p>
+            <h2 class="section-title light">Curate a Candlelit Tasting Flight</h2>
+            <p class="section-desc light">
+              Pair any three coffees or whole-leaf teas on our walnut and hammered-brass service tray with complimentary powder finishing and a <strong class="tabular-nums">₱45</strong> Trio Reserve privilege.
+            </p>
+          </div>
+
+          <div class="flight-presets" role="group" aria-label="Curated tasting flight presets">
+            <button type="button" class="flight-preset-btn is-active" data-flight-preset="midnight">
+              Midnight Espresso Trio
+            </button>
+            <button type="button" class="flight-preset-btn" data-flight-preset="velvet">
+              Velvet &amp; Caramel Reserve
+            </button>
+            <button type="button" class="flight-preset-btn" data-flight-preset="kyoto">
+              Kyoto Matcha &amp; Orchard
+            </button>
+          </div>
+
+          <div class="flight-tray-frame reveal-on-scroll">
+            <div class="flight-slots-grid" id="flight-slots-grid">
+              <!-- 3 tasting flight courses rendered dynamically by js/script.js -->
+            </div>
+
+            <div class="flight-summary-bar" id="flight-summary-bar">
+              <!-- Live flavor balance meters and flight CTA rendered by js/script.js -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section class="section section-dark-coffee why-section" id="why-us">
+        <div class="container">
+          <div class="section-head section-head-centered reveal-on-scroll">
+            <p class="section-eyebrow gold">The Ember &amp; Leaf Promise</p>
+            <h2 class="section-title light">Why Choose Us</h2>
+            <p class="section-desc light">
+              Every detail, from green bean selection and water temperature to hand-whisked microfoam, is tuned for comfort and character.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <article class="feature-card reveal-on-scroll">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2C7 7 5 11.5 5 15a7 7 0 0014 0c0-3.5-2-8-7-13z"></path>
+                  <path d="M12 9v9"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">Premium Ingredients</h3>
+              <p class="feature-copy">Single-origin Arabica beans, ceremonial Uji matcha, whole loose-leaf teas, and Madagascar vanilla.</p>
+            </article>
+
+            <article class="feature-card reveal-on-scroll">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 8h1a4 4 0 010 8h-1"></path>
+                  <path d="M3 8h14v9a4 4 0 01-4 4H7a4 4 0 01-4-4V8z"></path>
+                  <path d="M6 2v3M10 2v3M14 2v3"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">Rich and Authentic Flavors</h3>
+              <p class="feature-copy">Balanced chocolatey espresso notes, caramelized Okinawa brown sugar, and bright fruit infusions.</p>
+            </article>
+
+            <article class="feature-card reveal-on-scroll">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">Freshly Prepared Drinks</h3>
+              <p class="feature-copy">Never pre-batched or watered down. Every espresso shot and tea steep begins when you order.</p>
+            </article>
+
+            <article class="feature-card reveal-on-scroll">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l2.7 5.5 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.8 1-6.1-4.4-4.3 6.1-.9L12 3z"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">Quality You Can Taste</h3>
+              <p class="feature-copy">Silky steamed milk microfoam, glistening caramel ribbons, and clean natural finishes in every glass.</p>
+            </article>
+
+            <article class="feature-card reveal-on-scroll">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3a9 9 0 109 9 7 7 0 01-9-9z"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">Coffee and Tea for Every Mood</h3>
+              <p class="feature-copy">Crisp cold brews for busy mornings, calming chamomile for slow evenings, and joyful boba treats.</p>
+            </article>
+
+            <article class="feature-card reveal-on-scroll">
+              <div class="feature-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 00-7.8 7.8l1.1 1L12 21l7.7-7.6 1.1-1a5.5 5.5 0 000-7.8z"></path>
+                </svg>
+              </div>
+              <h3 class="feature-title">A Perfect Moment in Every Cup</h3>
+              <p class="feature-copy">Served in warm porcelain, fluted crystal, scalloped plates, and burnished brass utensils for quiet luxury.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Special Promotion Section -->
+      <section class="promo-section" id="promotion">
+        <div class="promo-media">
+          <img
+            src="img/promo-special-sip.jpg"
+            alt="Two tall fluted 24k gold-rimmed Baccarat-cut crystal highball glasses of iced caramel latte and layered strawberry matcha on black-and-gold porcelain saucers, marble charger plates, baroque gold spoons, and brushed gold straws in candlelight"
+            class="promo-bg-img"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          />
+          <canvas class="promo-fx-canvas" id="promo-fx-canvas" aria-hidden="true"></canvas>
+          <div class="promo-scrim" aria-hidden="true"></div>
+        </div>
+        <div class="container">
+          <div class="promo-content reveal-on-scroll">
+            <p class="section-eyebrow gold">Candlelit Reserve Pairing</p>
+            <h2 class="promo-title">Make Every Sip Special.</h2>
+            <p class="promo-copy">
+              Savor our signature evening pairing: <strong>Iced Caramel Latte</strong> &amp; <strong>Strawberry Matcha</strong> served in 24k gold-rimmed fluted crystal highball glasses beside dark cocoa truffles.
+            </p>
+            <div class="promo-actions">
+              <button type="button" class="btn btn-primary" id="add-duo-btn" data-add-duo="iced-caramel-latte,strawberry-matcha">
+                Add Candlelit Duo &middot; <span class="tabular-nums">₱340</span>
+              </button>
+              <a href="#tea" class="btn btn-outline-light">Browse Tea Bar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section (No locations, maps, or physical addresses) -->
+      <section class="section section-chocolate contact-section" id="contact">
+        <div class="container">
+          <div class="section-head section-head-centered reveal-on-scroll">
+            <p class="section-eyebrow gold">Direct Concierge</p>
+            <h2 class="section-title light">Get in Touch</h2>
+            <p class="section-desc light">
+              Questions about custom beverage orders, flavor pairings, or private coffee and tea tastings? Reach us directly anytime.
+            </p>
+          </div>
+
+          <div class="contact-cards-grid">
+            <a href="mailto:taburadalimar@gmail.com" class="contact-card reveal-on-scroll">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                  <path d="M3 7l9 6 9-6"></path>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Email Us</span>
+                <span class="contact-value">taburadalimar@gmail.com</span>
+                <span class="contact-hint">Send an inquiry or special drink request</span>
+              </div>
+            </a>
+
+            <a href="tel:09967854326" class="contact-card reveal-on-scroll">
+              <div class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.5 2.1L8 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.5c.9.3 1.8.6 2.8.7a2 2 0 011.8 2.1z"></path>
+                </svg>
+              </div>
+              <div class="contact-meta">
+                <span class="contact-label">Call or Text</span>
+                <span class="contact-value tabular-nums">09967854326</span>
+                <span class="contact-hint">Available daily for orders and consultations</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo-lockup">
+            <img src="img/logo.png" alt="Ember and Leaf logo" class="footer-logo" width="46" height="46" />
+            <div>
+              <span class="footer-brand-name">Ember &amp; Leaf</span>
+              <span class="footer-tagline">Slow-roasted warmth. Steeped in quiet luxury.</span>
+            </div>
+          </a>
+          <p class="footer-about">
+            Curating 40 handcrafted coffee and tea experiences, from bold espresso extractions and caramel swirls to serene botanical teas.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#best-sellers">Best Sellers</a></li>
+            <li><a href="#why-us">Why Choose Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Collections</h3>
+          <ul class="footer-links">
+            <li><a href="#coffee">Coffee Collection</a></li>
+            <li><a href="#tea">Tea Collection</a></li>
+            <li><a href="#tasting-flight">Tasting Flight Tray</a></li>
+            <li><a href="#promotion">Signature Pairings</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="footer-heading">Contact</h3>
+          <ul class="footer-links">
+            <li><a href="mailto:taburadalimar@gmail.com">taburadalimar@gmail.com</a></li>
+            <li><a href="tel:09967854326" class="tabular-nums">09967854326</a></li>
+          </ul>
+          <div class="social-links" aria-label="Social media">
+            <a href="#contact" class="social-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17.5" cy="6.5" r="1"></circle>
+              </svg>
+            </a>
+            <a href="#contact" class="social-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+              </svg>
+            </a>
+            <a href="mailto:taburadalimar@gmail.com" class="social-btn" aria-label="Email Ember and Leaf">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+                <path d="M3 7l9 6 9-6"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; <span id="footer-year">2026</span> Ember &amp; Leaf Coffee &amp; Tea House. All rights reserved.</p>
+        <p class="footer-note">Crafted with roasted beans, whole tea leaves, and warm hospitality.</p>
+      </div>
+    </footer>
+
+    <!-- Shopping Cart Slide-Over Drawer -->
+    <div class="drawer-backdrop" id="cart-backdrop" hidden></div>
+    <aside
+      class="cart-drawer"
+      id="cart-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="cart-drawer-title"
+      hidden
+    >
+      <div class="cart-drawer-header">
+        <div>
+          <h2 id="cart-drawer-title" class="cart-drawer-title">Your Order Bag</h2>
+          <p class="cart-drawer-subtitle" id="cart-item-summary">0 items selected</p>
+        </div>
+        <button type="button" class="icon-close-btn" id="cart-close-btn" aria-label="Close shopping cart">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="cart-gift-bar" id="cart-gift-bar">
+        <div class="cart-gift-text" id="cart-gift-text">
+          Add <strong class="tabular-nums">₱400.00</strong> for complimentary velvet gold-box presentation &amp; handwritten card
+        </div>
+        <div class="cart-gift-track" aria-hidden="true">
+          <div class="cart-gift-fill" id="cart-gift-fill"></div>
+        </div>
+      </div>
+
+      <div class="cart-items-body" id="cart-items-body">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="cart-upsell-slot" id="cart-upsell-slot" hidden>
+        <!-- Rendered dynamically by js/script.js -->
+      </div>
+
+      <div class="cart-drawer-footer" id="cart-drawer-footer">
+        <div class="cart-totals">
+          <div class="total-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal" class="tabular-nums">₱0.00</span>
+          </div>
+          <div class="total-row">
+            <span>Velvet Box &amp; Gold Packaging</span>
+            <span id="cart-packaging-tier" class="tabular-nums">Signature Kraft</span>
+          </div>
+          <div class="total-row grand-total">
+            <span>Total</span>
+            <span id="cart-total" class="tabular-nums">₱0.00</span>
+          </div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-full" id="open-checkout-btn">
+          Proceed to Demo Checkout
+        </button>
+        <button type="button" class="btn-text-muted" id="clear-cart-btn">
+          Clear Bag
+        </button>
+      </div>
+    </aside>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal-backdrop" id="product-modal-backdrop" hidden></div>
+    <div
+      class="modal-dialog product-modal"
+      id="product-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modal-product-title"
+      hidden
+    >
+      <button type="button" class="icon-close-btn modal-close-corner" id="product-modal-close" aria-label="Close product preview">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+      </button>
+      <div class="product-modal-grid" id="product-modal-content">
+        <!-- Populated by js/script.js -->
+      </div>
+    </div>
+
+    <!-- Demo Checkout Modal -->
+    <div class="modal-backdrop" id="checkout-modal-backdrop" hidden></div>
+    <div
+      class="modal-dialog checkout-modal"
+      id="checkout-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="checkout-modal-title"
+      hidden
+    >
+      <div class="checkout-modal-header">
+        <div>
+          <p class="checkout-kicker">Demo Checkout | No Real Payment Processed</p>
+          <h2 id="checkout-modal-title" class="checkout-title">Complete Demo Order</h2>
+        </div>
+        <button type="button" class="icon-close-btn" id="checkout-modal-close" aria-label="Close demo checkout">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <form id="demo-checkout-form" class="checkout-form">
+        <div class="checkout-summary-box" id="checkout-summary-box"></div>
+
+        <div class="form-row">
+          <label for="customer-name" class="form-label">Full Name</label>
+          <input type="text" id="customer-name" class="form-input" required placeholder="e.g. Mara Santos" />
+        </div>
+
+        <div class="form-grid-2">
+          <div class="form-row">
+            <label for="customer-phone" class="form-label">Mobile Number</label>
+            <input type="tel" id="customer-phone" class="form-input" required placeholder="09XX XXX XXXX" />
+          </div>
+          <div class="form-row">
+            <label for="customer-email" class="form-label">Email Address</label>
+            <input type="email" id="customer-email" class="form-input" required placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label for="order-notes" class="form-label">Sweetness &amp; Gift Card Message (Optional)</label>
+          <input type="text" id="order-notes" class="form-input" placeholder="e.g. Less ice, handwritten card: Enjoy every warm sip" />
+        </div>
+
+        <p class="demo-notice">
+          This is an interactive demonstration checkout. No real payment or charge is processed.
+        </p>
+
+        <button type="submit" class="btn btn-primary btn-full">Place Demo Order</button>
+      </form>
+
+      <div id="checkout-confirmation" class="checkout-confirmation" hidden></div>
+    </div>
+
+    <!-- Subtle Cart Toast -->
+    <div class="toast-banner" id="toast-banner" role="status" aria-live="polite" hidden>
+      <span id="toast-message">Added to bag</span>
+      <button type="button" class="toast-action" id="toast-view-bag">View Bag</button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M18 15l-6-6-6 6"></path>
+      </svg>
+    </button>
+  </body>
+</html>
